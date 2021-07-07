@@ -31,3 +31,9 @@ class SingleLinkedList:
             prev = curr
             curr = next
         self.head = prev
+
+    def print(self):
+        temp = self.head
+        while(temp):
+            print(temp.data)
+            temp = temp.next
