@@ -15,6 +15,8 @@ class SingleLinkedList:
         node = Node(data)
         node.next = self.head
         self.head = node
+        if self.tail is None:
+            self.tail = node
 
     def append(self, data):
     '''добавление элемента в конец списка'''
