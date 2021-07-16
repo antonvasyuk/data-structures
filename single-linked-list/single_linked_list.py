@@ -1,17 +1,17 @@
 class Node:
-    '''создание элемента списка'''
     def __init__(self, data):
+        '''создание элемента списка'''
         self.data = data
         self.next = None
         
 class SingleLinkedList:
-    '''создание списка'''
     def __init__(self):
+        '''создание списка'''
         self.head = None
         self.tail = None
 
     def push(self, data):
-    '''добавление элемента в начало списка'''
+        '''добавление элемента в начало списка'''
         node = Node(data)
         node.next = self.head
         self.head = node
@@ -19,7 +19,7 @@ class SingleLinkedList:
             self.tail = node
 
     def append(self, data):
-    '''добавление элемента в конец списка'''
+        '''добавление элемента в конец списка'''
         node = Node(data)
         if self.head is None:
             self.head = node
@@ -28,7 +28,7 @@ class SingleLinkedList:
         self.tail = node
 
     def reverse(self):
-    '''разворот списка'''
+        '''разворот списка'''
         prev = None
         curr = self.head
         self.tail = curr
@@ -40,7 +40,7 @@ class SingleLinkedList:
         self.head = prev
 
     def print(self):
-    '''вывод всех элементов списка'''
+        '''вывод всех элементов списка'''
         temp = self.head
         while(temp):
             print(temp.data)
